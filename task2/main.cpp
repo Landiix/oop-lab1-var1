@@ -11,7 +11,6 @@
 int main() {
     std::cout << "Задание 2. Индекс документов — Усманов Максим, ИДБ-25-01, вариант 1\n\n";
 
-    // --- BST ---
     BinarySearchTree<int, std::string> tree;
     check(tree.insert(5, "five"), "insert 5");
     check(tree.insert(3, "three"), "insert 3");
@@ -25,14 +24,12 @@ int main() {
           "inorder по возрастанию");
     check(tree.erase(5) && !tree.contains(5), "удаление узла");
 
-    // --- общий алгоритм пересечения ---
     check(intersectSorted(std::vector<int>{1, 2, 3, 5}, std::vector<int>{2, 4, 5}) ==
               std::vector<int>({2, 5}),
           "пересечение с общими элементами");
     check(intersectSorted(std::vector<int>{1, 2}, std::vector<int>{3, 4}).empty(),
           "пустое пересечение");
 
-    // --- индекс ---
     DocumentIndex index;
     check(index.add({"doc1", "Object Oriented Programming and programming"}),
           "add doc1");
