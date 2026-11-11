@@ -1,0 +1,11 @@
+build/
+compile_commands.json
+.cmake/
+cmake-build-*/
+task1/output/
+task2/output/
+.idea/
+.vscode/
+.DS_Store
+*.o
+*.out
